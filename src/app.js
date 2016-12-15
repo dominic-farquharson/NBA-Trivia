@@ -60,29 +60,30 @@ class Questions {
   }
 
   //Check if Question is right or wrong
-  checkRight() {
-    console.log('choices:' , this.choices);
-    console.log('Answer = ', this.answer);
+  checkRight(x) {
+  
     //User selection, will change this
     //let response = $('#answerSelection').val();
     // console.log(response);
-    let testarr = $('.questions').filter(function(a) {
-      return $(a).text() === this.answer;
-    });
-    console.log('Test Array: ', testarr);
-    // if(response == this.answer) {
-    //   console.log('you are correct');
-    //
-    //   //$('#testing').html(allQuestions[1]);
-    //   //Player1.timerIncrease();
-    //
-    // }
-    // else {
-    //   //Player1.timerDecrease;
-    //   //console.log(Player1.timer);
-    //   //$('#timer').html(console.log(Player1.timer -= 5) )
-    //   console.log('incorrect');
-    // }
+    // let testarr = $('.questions').filter(function(a) {
+    //   return $(a).text() === this.answer;
+    // });
+    // console.log('Test Array: ', testarr);
+
+    if( x == this.answer) {
+      console.log('you are correct');
+
+
+      //$('#testing').html(allQuestions[1]);
+      //Player1.timerIncrease();
+
+    }
+    else {
+      //Player1.timerDecrease;
+      //console.log(Player1.timer);
+      //$('#timer').html(console.log(Player1.timer -= 5) )
+      console.log('incorrect');
+    }
   }
 
   //Function to output Question
@@ -90,21 +91,45 @@ class Questions {
       $('#questions').html(this.question);
   }
   //Function to output answers
-let number = 1;
+
   printChoices() {
+    let answerChoice = 1;
     let ul = $('<ul />').appendTo('#answers');
     for (let index of this.choices) {
     let li = $('<li />');
-    li.append(index).attr('class', 'questions');
-    //adding click event to check if answer is correct
-    console.log(this.checkRight);
+    //setting answer attribute to check for correct answer
+    li.append(index).attr({'class': 'questions', 'value':answerChoice, 'id':'question'+answerChoice});
+    answerChoice++;
+
+    ul.append(li);
+  }
+
+
+      //adding click event to check if answer is correct
     //Fat Arrow Syntax Function gives you access to outside scope
-    li.click(() =>{
-      this.checkRight();
+
+
+    $('#question1').click(() =>{
+      console.log('Question 1' , answerChoice);
+      this.checkRight(1);
+    });
+    $('#question2').click(() =>{
+      console.log('Question 2' , answerChoice);
+      this.checkRight(2);
+    });
+    $('#question3').click(() =>{
+      console.log('Question 3' , answerChoice);
+      this.checkRight(3);
+    });
+    $('#question4').click(() =>{
+      console.log('Question 4' , answerChoice);
+      this.checkRight(4);
     });
 
-    ul.append(li);}
+
+
   }
+
 
   //start game
   start() {
@@ -122,7 +147,7 @@ let question2 = new Questions('Is your favorite color Green or Yellow' , 1, ['gr
 let start = [function(){question1.start()}, function(){question2.start()}];
 //Event Listener
 // $('#start').click(function(){question1.start()});
-$('#start').click(start[1]);
+$('#start').click(start[0]);
 
 
 
