@@ -44,11 +44,12 @@ class Player {
 //Creating Player 1
 let Player1 = new Player(60,'hello', 2);
 //Grabbing Answer Choice Inputs
+/*
 $('.one').click(Player1.checkRight);
 $('.two').click(Player1.checkRight);
 
   //Player.checkRight);
-
+*/
 
 //Questions class
 class Questions {
@@ -60,23 +61,28 @@ class Questions {
 
   //Check if Question is right or wrong
   checkRight() {
+    console.log('choices:' , this.choices);
+    console.log('Answer = ', this.answer);
     //User selection, will change this
-    let response = $('#answerSelection').val();
-    console.log(response);
-    if(response== this.answer) {
-      console.log('you are correct');
-
-      //$('#testing').html(allQuestions[1]);
-      //Player1.timerIncrease();
-
-    }
-    else {
-      //Player1.timerDecrease;
-      //console.log(Player1.timer);
-      //$('#timer').html(console.log(Player1.timer -= 5) )
-
-      console.log('incorrect');
-    }
+    //let response = $('#answerSelection').val();
+    // console.log(response);
+    let testarr = $('.questions').filter(function(a) {
+      return $(a).text() === this.answer;
+    });
+    console.log('Test Array: ', testarr);
+    // if(response == this.answer) {
+    //   console.log('you are correct');
+    //
+    //   //$('#testing').html(allQuestions[1]);
+    //   //Player1.timerIncrease();
+    //
+    // }
+    // else {
+    //   //Player1.timerDecrease;
+    //   //console.log(Player1.timer);
+    //   //$('#timer').html(console.log(Player1.timer -= 5) )
+    //   console.log('incorrect');
+    // }
   }
 
   //Function to output Question
@@ -84,17 +90,26 @@ class Questions {
       $('#questions').html(this.question);
   }
   //Function to output answers
-
+let number = 1;
   printChoices() {
     let ul = $('<ul />').appendTo('#answers');
     for (let index of this.choices) {
     let li = $('<li />');
-    li.append(index);
+    li.append(index).attr('class', 'questions');
+    //adding click event to check if answer is correct
+    console.log(this.checkRight);
+    //Fat Arrow Syntax Function gives you access to outside scope
+    li.click(() =>{
+      this.checkRight();
+    });
+
     ul.append(li);}
   }
 
   //start game
   start() {
+    Player1.counter();
+    $('#clock').toggle();
     this.printQuestions();
     this.printChoices();
   }
@@ -104,6 +119,14 @@ class Questions {
 //Questions
 let question1 = new Questions('Is your favorite color Red or blue' , 2, ['red', 'blue', 'green', 'yellow']);
 let question2 = new Questions('Is your favorite color Green or Yellow' , 1, ['green', 'yellow', 'orange', 'purple']);
+let start = [function(){question1.start()}, function(){question2.start()}];
+//Event Listener
+// $('#start').click(function(){question1.start()});
+$('#start').click(start[1]);
+
+
+
+
 /*
 let allQuestions = [function(){question1.printQuestions()}, function(){question2.printQuestions()}];
 let allAnswers =[function(){question1.printChoices()}, function(){question2.printChoices()}];
@@ -130,16 +153,14 @@ for(let index of question1.choices) {
 }
 */
 
-//Event Listener
-// $('#start').click(function(){question1.start()});
-$('#start').click(function(){allQuestions[0]});
+
 
 
 //testing
 /* questions testing
 Putting questions in an array
 */
-$('#testing').html(allQuestions[0]);
+//$('#testing').html(allQuestions[0]);
 
 
 
