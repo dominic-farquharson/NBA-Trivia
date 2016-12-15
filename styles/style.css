@@ -2,6 +2,7 @@
 #answerSelection {
   width:100px;
   border: 1px black solid;
+  margin-top:50px;
 }
 
 /* Testing Game logic */
@@ -9,4 +10,13 @@
   border:1px black solid;
   width:400px;
   height:100px;
+}
+
+/* Timer */
+#timer {
+  color:black;
+  font-size:3em;
+  text-align: center;
+  width:100px;
+  border:1px black solid;
 }
