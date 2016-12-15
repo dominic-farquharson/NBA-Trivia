@@ -3,3 +3,10 @@
   width:100px;
   border: 1px black solid;
 }
+
+/* Testing Game logic */
+#testing {
+  border:1px black solid;
+  width:400px;
+  height:100px;
+}

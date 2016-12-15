@@ -35,15 +35,18 @@ class Questions {
   }
 
   //Check if Question is right or wrong
-  checkRight() {   
-    let response = $('#answerSelection').value;
+  checkRight() {
+    //User selection, will change this
+    let response = $('#answerSelection').val();
     console.log(response);
     if(response== this.answer) {
       console.log('you are correct');
+      $('#testing').html(allQuestions[1]);
     }
     else {
       //Player1.timerDecrease;
       //console.log(Player1.timer);
+      $('#timer').html(console.log(Player1.timer -= 5) )
       console.log('incorrect');
     }
   }
@@ -52,8 +55,12 @@ class Questions {
 //Questions
 let question1 = new Questions('Red or blue' , 2);
 let question2 = new Questions('Green or Yellow' , 1);
-
+let allQuestions = [question1.question, question2.question]
 //testing
+//questions testing
+
+$('#testing').html(allQuestions[0]);
+
 
 console.log(Player1.timer);
 console.log(Player1);
