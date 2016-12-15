@@ -16,35 +16,42 @@ class Player {
   timerIncrease() {
     this.timer +=5;
   }
-  //Check if Question is right or wrong
-  checkRight() {
-    check(this.input);
-  }
 
 }
 //Creating Player 1
-let Player1 = new Player(60,'hello', 2, 3);
+let Player1 = new Player(60,'hello', 2);
 //Grabbing Answer Choice Inputs
 $('.one').click(Player1.checkRight);
+$('.two').click(Player1.checkRight);
 
   //Player.checkRight);
 
 
-
-
-//Checks for write or wrong answer
-function check(x) {
-  console.log('I hear you.');
-  if(this.input === 3) {
-    console.log('you are correct');
+//Questions class
+class Questions {
+  constructor(question, answer) {
+    this.question = question;
+    this.answer = answer;
   }
-  else {
-    Player1.timerDecrease;
-    console.log(Player1.timer);
+
+  //Check if Question is right or wrong
+  checkRight() {   
+    let response = $('#answerSelection').value;
+    console.log(response);
+    if(response== this.answer) {
+      console.log('you are correct');
+    }
+    else {
+      //Player1.timerDecrease;
+      //console.log(Player1.timer);
+      console.log('incorrect');
+    }
   }
 }
 
-//Questions class?
+//Questions
+let question1 = new Questions('Red or blue' , 2);
+let question2 = new Questions('Green or Yellow' , 1);
 
 //testing
 
