@@ -1,4 +1,5 @@
 console.log('Player is connected');
+//add user attempts
 class Player {
   constructor(score, time) {
     this.score = score;

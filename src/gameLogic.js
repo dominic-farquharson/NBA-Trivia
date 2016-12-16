@@ -14,9 +14,10 @@ $(`.option3`).click(function(){checkRight(this.innerHTML)});
 
 //printing questions and answer
 function printQA(x) {
-    $('#question').text(Questions[x].question).attr('value', x);
+    //using Velocity to add a fade effect
+    $('#question').text(Questions[x].question).velocity('fadeIn', {duration:200});
     for(let y = 0; y <4; y++) {
-    $(`.option${y}`).text(Questions[x].answerChoices[y])
+    $(`.option${y}`).text(Questions[x].answerChoices[y]).velocity('fadeIn', {duration:600});
   }
 }
 
@@ -27,17 +28,33 @@ let index=0;
 function checkRight(userChoice) {
 
   if(userChoice === Questions[index].correctAnswer){
-    console.log('Correct!'); index++;
     //Temporary: Preventing error when question index greater than # of questions
+    //changing question 1
+    index++;
     if(index>4){
-      index=0;
+      endStartNew();
+
     }
     //updating score if correct
     Player1.updateScore();
-    $('#score').html(Player1.score);
+      $('#score').text(Player1.score);
+
+    //Alert Correct
+    // alert('Correct!');
     //changing Question
     printQA(index)}
     else {
-      console.log('incorrect')
+
+      // alert('Wrong!');
+      console.log(index);
+    //change Questions
+      index++;
+      if(index>4){
+        endStartNew();
+      }
+      printQA(index);
     }
+
+
+
   }

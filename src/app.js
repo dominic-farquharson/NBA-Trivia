@@ -25,6 +25,22 @@ function counter() {
 
   }, 1000);
 }
+//End Game Screen - Restart Game
+function endStartNew() {
+    //$('#options').html(Player1.score);
+    //Hiding Quiz Questions + Timer
+    $('#options').velocity('slideUp', {duration:800});
+    $('#question').velocity('slideUp', {duration:800});
+    $('#timer').velocity('slideUp', {duration:800});
+    $('#clock>h3').velocity('slideUp', {duration:800});
+
+
+
+
+}
+
+
+
 //Outputting Counter
 counter();
 //printing Question 1

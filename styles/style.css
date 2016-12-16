@@ -22,4 +22,9 @@
 
 #scoreHeading {
   border-top: 1px black solid;
+  font-size: 2em;
+}
+
+#score {
+  font-size: 3em;
 }
