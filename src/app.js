@@ -9,7 +9,7 @@ let Questions = [
 ]
 
 //Creating a Player
-let Player1 = new Player(0, 60);
+let Player1 = new Player(0, 59);
 
 //timer
 function counter() {
@@ -21,6 +21,9 @@ function counter() {
     if(Player1.time === -1) {
       // alert('time is up');
       clearInterval(timer);
+      //End game when time is up
+      alert('Time is up!');
+      endStartNew();
     }
 
   }, 1000);
