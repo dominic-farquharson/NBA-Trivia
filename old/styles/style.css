@@ -1,0 +1,35 @@
+/* Temporary Answer Box */
+#answerSelection {
+  width:100px;
+  border: 1px black solid;
+  margin-top:50px;
+}
+
+/* Testing Game logic */
+#testing {
+  border:1px black solid;
+  width:400px;
+  height:100px;
+}
+
+/* Timer */
+#timer {
+  color:black;
+  font-size:3em;
+  text-align: center;
+  width:100px;
+  border:1px black solid;
+}
+
+#clock {
+  display: none;
+}
+
+#start {
+  font-size:4em;
+  width:200px;
+  margin:0 auto;
+}
+body {
+  margin-left:400px;
+}

@@ -1,35 +1,25 @@
-/* Temporary Answer Box */
-#answerSelection {
+/* Answer choices */
+#options>div {
+  border:3px black solid;
+  padding:10px;
+  background:rgba(0,0,0,.7);
+  color: white;
   width:100px;
-  border: 1px black solid;
-  margin-top:50px;
+  margin-bottom: 10px;
+
+}
+/* Quiz Question */
+#question {
+  font-size: 2em;
+  margin-bottom: 20px;
+  border-bottom:1px black solid;
 }
 
-/* Testing Game logic */
-#testing {
-  border:1px black solid;
-  width:400px;
-  height:100px;
-}
-
-/* Timer */
 #timer {
-  color:black;
-  font-size:3em;
-  text-align: center;
-  width:100px;
-  border:1px black solid;
+  font-size: 2em;
+  margin-bottom:20px;
 }
 
-#clock {
-  display: none;
-}
-
-#start {
-  font-size:4em;
-  width:200px;
-  margin:0 auto;
-}
-body {
-  margin-left:400px;
+#scoreHeading {
+  border-top: 1px black solid;
 }
