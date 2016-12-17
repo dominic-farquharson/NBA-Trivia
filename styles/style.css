@@ -28,3 +28,26 @@
 #score {
   font-size: 3em;
 }
+
+/* Game Borad */
+#questionBoard {
+  width: 50%;
+  float: right;
+
+}
+
+/* Car Board */
+#carBoard {
+  /*border:1px black solid;*/
+  width: 50%;
+  height: 600px;
+}
+
+#road {
+  height:300px;
+  background:gray;
+}
+
+#car {
+  position: relative;
+}

@@ -26,7 +26,7 @@ function printQA(x) {
 let index=0;
 //Check if Choice is correct answer
 function checkRight(userChoice) {
-
+Computer1.move();
   if(userChoice === Questions[index].correctAnswer){
     //Temporary: Preventing error when question index greater than # of questions
     //changing question 1
@@ -44,6 +44,8 @@ function checkRight(userChoice) {
     //changing Question
     printQA(index)}
     else {
+      //moving computer car
+      //Computer1.move();
 
       // alert('Wrong!');
       console.log(index);
@@ -54,7 +56,5 @@ function checkRight(userChoice) {
       }
       printQA(index);
     }
-
-
 
   }

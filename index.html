@@ -1,46 +1,58 @@
 <!doctype html>
 
 <html>
+
 <head>
   <title>Home</title>
-  <link href='styles/style.css' type='text/css' rel='stylesheet' />
+  <link href="styles/style.css" type="text/css" rel="stylesheet" />
 </head>
 
 <body>
-<div id='clock'>
-<h1>Beat the Clock</h1>
-<h3>Timer</h3>
-<div id='timer'>60s</div>
+  <!-- Questions + Answer + Timer -->
+  <div id='questionBoard'>
+      <div id="clock">
+        <h1>Beat the Clock</h1>
+        <h3>Timer</h3>
+        <div id="timer">60s</div>
+      </div>
+
+      <!-- Question -->
+      <div id="question"></div>
+      <!-- Answer Selection -->
+      <div id="options">
+        <div class="option0"></div>
+        <div class="option1"></div>
+        <div class="option2"></div>
+        <div class="option3"></div>
+      </div>
+
+      <h3 id="scoreHeading">Score</h3>
+      <div id="score"></div>
 </div>
 
-<!-- Question -->
-<div id='question'></div>
-<!-- Answer Selection -->
-<div id='options'>
-  <div class='option0'></div>
-  <div class='option1'></div>
+<div id='carBoard'>
+  <div id='road'>
+    <div>
+    <img id='car' src='assets/car.png' width='25%' height='25%' />
+  </div>
+  </div>
 
-  <div class='option2'></div>
-  <div class='option3'></div>
 </div>
 
-<h3 id="scoreHeading">Score</h3>
-<div id='score'></div>
 
 
-
-<!-- JQuery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<!-- Velocity.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.4.0/velocity.min.js"></script>
-<!-- Connecting Questions.js -->
-<script src='src/questions.js'></script>
-<!-- Game Logic -->
-<script src = 'src/gameLogic.js'></script>
-<!-- Player file -->
-<script src='src/player.js'></script>
-<!-- Connecting App. Js. -->
-<script src = 'src/app.js'></script>
+  <!-- JQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <!-- Velocity.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.4.0/velocity.min.js"></script>
+  <!-- Connecting Questions.js -->
+  <script src="src/questions.js"></script>
+  <!-- Game Logic -->
+  <script src="src/gameLogic.js"></script>
+  <!-- Player file -->
+  <script src="src/player.js"></script>
+  <!-- Connecting App. Js. -->
+  <script src="src/app.js"></script>
 
 </body>
 

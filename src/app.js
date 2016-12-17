@@ -10,6 +10,8 @@ let Questions = [
 
 //Creating a Player
 let Player1 = new Player(0, 59);
+//Creating computer
+let Computer1 = new Computer(10, 15);
 
 //timer
 function counter() {
@@ -40,10 +42,13 @@ function endStartNew() {
 
 
 
+
 }
 
 
 
+//Starting Car
+Computer1.move();
 //Outputting Counter
 counter();
 //printing Question 1
