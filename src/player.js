@@ -1,5 +1,6 @@
 console.log('Player is connected');
-//add user attempts
+
+//Player Class
 class Player {
   constructor(score, time) {
     this.score = score;
@@ -10,17 +11,20 @@ class Player {
     this.score+=1;
   }
 }
-//Make computer move
-let move = 50;
+
+//Computer Class
 class Computer {
   constructor(score, time) {
     this.score = score;
     this.time = time;
   }
-  move() {
-    console.log(move);
-    $('#car').velocity({translateX:600},{duration:60000}, {easing: 'easeInBounce' });
-      console.log(move);
+  checkRight() {
+    //giving computer 50% chance of getting question correct
+    let x = Math.floor(Math.random()*2);
+    console.log('Computer Score', x);
+    if( x==1) {
+      this.score+=1;
+    }
 
   }
 

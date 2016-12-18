@@ -1,8 +1,8 @@
 console.log('gameLogic is connected');
 let x = 0;
-function print(y) {
-    console.log(Questions[y])
-}
+// function print(y) {
+//     console.log(Questions[y])
+// }
 
 //Grabbing innerHTML of question choices to compare with correct answer
 $(`.option0`).click(function(){checkRight(this.innerHTML)});
@@ -26,29 +26,30 @@ function printQA(x) {
 let index=0;
 //Check if Choice is correct answer
 function checkRight(userChoice) {
-Computer1.move();
+//Running computer score random number
+Computer1.checkRight();
+//UPdating Computer's score
+$('#computerScore').text(Computer1.score);
+
   if(userChoice === Questions[index].correctAnswer){
-    //Temporary: Preventing error when question index greater than # of questions
     //changing question 1
     index++;
-    if(index>4){
+    //ending game after last question
+    if(index==Questions.length){
+
       endStartNew();
 
     }
     //updating score if correct
     Player1.updateScore();
-      $('#score').text(Player1.score);
+      $('#playerScore').text(Player1.score);
 
     //Alert Correct
     // alert('Correct!');
     //changing Question
     printQA(index)}
     else {
-      //moving computer car
-      //Computer1.move();
 
-      // alert('Wrong!');
-      console.log(index);
     //change Questions
       index++;
       if(index>4){
