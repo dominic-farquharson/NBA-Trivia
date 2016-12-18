@@ -10,26 +10,45 @@
 <body>
   <!-- Questions + Answer + Timer -->
   <div id='questionBoard'>
-      <div id="clock">
-        <h1>Beat the Clock</h1>
-        <h3>Timer</h3>
-        <div id="timer">60s</div>
+       <div id="heading">
+         <!-- Source: ESPNCDN.com -->
+         <img src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nba.png?transparent=true" />
+        <h1 >NBA Trivia</h1>
       </div>
+
+
 
       <!-- Question -->
       <div id="question"></div>
       <!-- Answer Selection -->
       <div id="options">
-        <div class="option0"></div>
-        <div class="option1"></div>
-        <div class="option2"></div>
-        <div class="option3"></div>
+        <div class="row1">
+          <div class="option0"></div>
+          <div class="option1"></div>
+        </div>
+        <div class='row2'>
+          <div class="option2"></div>
+          <div class="option3"></div>
+        </div>
       </div>
+      <!-- Clearing floats -->
+      <div class='clear'></div>
 
-      <h3 class="scoreHeading">Score</h3>
+
+      <div id='scoreSection'>
+        <h2>Score</h2>
+        <div id='player1'>
+      <h3 class="scoreHeading">Player 1</h3>
       <div id="playerScore" class='score'></div>
-      <h3 class="scoreHeading">Computer Score</h3>
+    </div>
+    <div id='computer'>
+      <h3 class="scoreHeading">Computer</h3>
       <div id="computerScore" class='score'></div>
+    </div>
+
+    <div id="tryAgain">Try again?</div>
+    </div>
+
 </div>
 
 

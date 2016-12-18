@@ -1,18 +1,38 @@
 /* Answer choices */
-#options>div {
+#options>.row1>div,#options>.row2>div {
   border:3px black solid;
   padding:10px;
   background:rgba(0,0,0,.7);
   color: white;
-  width:100px;
+  width:200px;
+  height:50px;
   margin-bottom: 10px;
+  font-size:2.1em;
 
 }
+
+#heading {
+  font-size:1.4em;
+  /*text-align: center;*/
+
+}
+#heading>img {
+  width:50px;
+  height: 50px;
+}
+#heading>img, #heading>h1 {
+  display:inline-block;
+}
+
 /* Quiz Question */
-#question {
+#question, h2 {
   font-size: 2em;
   margin-bottom: 20px;
   border-bottom:1px black solid;
+}
+/* Hover effects for buttons */
+.option1::hover{
+  background:white;
 }
 
 #timer {
@@ -21,27 +41,46 @@
 }
 
 .scoreHeading {
-  border-top: 1px black solid;
+
   font-size: 2em;
 }
 
 .score {
   font-size: 3em;
+
+}
+#scoreSection {
+  text-align: center;
+}
+
+#player1, #computer {
+  display:inline-block;
+  border: 1px black solid;
+  width:45%;
+  margin-right:10px;
+  color:white;
+  background:rgba(0,0,0,.7);
+}
+
+/* Putting questions in 2 rows */
+.row1 {
+  float: left;
+}
+.row2 {
+  float: right;
+}
+/* Clearing Floats */
+.clear {
+  clear:both;
 }
 
 /* Game Borad */
 #questionBoard {
   width: 50%;
-  float: right;
+  margin: 0 auto;
 
 }
 
-/* Car Board */
-#carBoard {
-  /*border:1px black solid;*/
-  width: 50%;
-  height: 600px;
-}
 
 #road {
   height:300px;
@@ -50,4 +89,17 @@
 
 #car {
   position: relative;
+}
+
+/* Image background */
+body {
+  
+  /*background-image: url('../assets/kyriesteph.jpg');*/
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#tryAgain {
+  display:none;
 }
