@@ -1,12 +1,17 @@
 console.log('App.js is connected');
 //Putting questions into an array
 let Questions = [
-   new Question('Question 1' , ['question 1', 'blue', 'green', 'yellow-correct'] , 'yellow-correct'),
-   new Question('Question 2' , ['question 2', 'blue', 'green-correct', 'yellow'] , 'green-correct'),
-   new Question('Question 3' , ['question 3', 'blue-correct', 'green', 'yellow'] , 'blue-correct'),
-   new Question('Question 4' , ['question 3', 'blue', 'green-correct', 'yellow'] , 'green-correct'),
-   new Question('Question 5' , ['I"m correct', 'blue', 'green', 'yellow'] , 'I"m correct'),
-   new Question('Question 6' , ['orange', 'blue', 'I"m correct', 'yellow'] , 'I"m correct'),
+   new Question('Which player blew a 3-1 lead in the most important game of his career?' , ['Steph Curry', 'Anthony Davis', 'Steph Curry', 'James Harden'] , 'Steph Curry'),
+   new Question('Who is the most overrated MVP in NBA history?' , ['Steph Curry', 'Lebron James', 'Steph Curry', 'Kobe Bryant'] , 'Steph Curry'),
+   new Question('Who was the true MVP of the 2015-2016 NBA season?' , ['LeGOAT James', 'Steph Curry', 'James Harden', 'Anthony Davis'] , 'LeGOAT James'),
+   new Question('Which player can average 30, but still lose by 20?' , ['Anthony Davis', 'Kevin Durant', 'Demarcus Cousins', 'Mark Gasol'] , 'Anthony Davis'),
+   new Question('On the day of his retirement, which of these players scored 60?' , ['Kobe Bryant', 'Kevin Garnet', 'Michael Jordan', "Shaquille O'Neal"] , 'Kobe Bryant'),
+   new Question("Which of these players led his team down from a 3-1 deficit to stage the greatest comeback in NBA and sport's history?" , ['LeGreatest James', 'Kevin Durant', 'Charles Barkeley', 'Kobe Bryant'] , 'LeGreatest James'),
+   new Question("Who did the Golden State Warriors defeat in the 2016 WCF?" , ['OKC Thunder', 'Spurs', 'LA Clippers', 'Houston Rockets'] , 'OKC Thunder'),
+   new Question("Which of these NBA superstars shocked the Basketball world by going to the team that defeated him in NBA free agency? This move was called the weakest an NBA superstar has ever made, by, ESPN reporter, Stephen A Smith."
+   , ['Kevin Durant', 'Pau Gasol', 'Chris Paul', 'Blake Griffin'] , 'Kevin Durant'),
+   new Question("Which team had the greatest regular season record AND won a ring?" , ['Phoenix Suns', 'Chicago Bulls', 'Golden State Warriors', 'Los Angeles Lakers'] , 'Chicago Bulls'),
+   new Question("This player was called, 'The Answer.'" , ['Allen Iverson', 'Tim Duncan', 'Kobe Bryant', 'Kevin Durant'] , 'Allen Iverson'),
 ]
 
 //Creating a Player

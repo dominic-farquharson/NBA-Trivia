@@ -18,7 +18,10 @@ function printQA(x) {
 let index=0;
 //Check if Choice is correct answer
 function checkRight(userChoice) {
-
+  //Running computer score random number
+  Computer1.checkRight();
+  //UPdating Computer's score
+  $('#computerScore').text(Computer1.score);
 
   if(userChoice === Questions[index].correctAnswer){
     //changing question
@@ -43,9 +46,6 @@ function checkRight(userChoice) {
       //changing question
       printQA(index);
     }
-    //Running computer score random number
-    Computer1.checkRight();
-    //UPdating Computer's score
-    $('#computerScore').text(Computer1.score);
+
 
   }
