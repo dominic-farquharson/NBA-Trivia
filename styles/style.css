@@ -4,7 +4,6 @@
   padding:10px;
   background:rgba(0,0,0,.7);
   color: white;
-  /*width:200px;*/
   height:50px;
   margin-bottom: 10px;
   font-size:2.1em;
@@ -28,17 +27,13 @@
 
 /* Quiz Question */
 #question, h2 {
-  font-size: 2em;
+  font-size: 2.4em;
   font-family: 'Exo', sans-serif;
   margin-bottom: 20px;
-  border-bottom:1px black solid;
+  border-bottom:3px white solid;
   text-align: center;
+  background:rgba(0,0,0,.7);
 }
-/* Hover effects for buttons */
-.option1::hover{
-  background:white;
-}
-
 #timer {
   font-size: 2em;
   margin-bottom:20px;
@@ -61,7 +56,7 @@
 
 #player1, #computer {
   display:inline-block;
-  border: 1px black solid;
+  border: 3px black solid;
   width:45%;
   margin-right:10px;
   color:white;
@@ -99,13 +94,19 @@
 
 /* Image background */
 body {
-
-  /*background-image: url('../assets/kyriesteph.jpg');*/
+  /* -- Source: Pixelstalk.net --*/
+  background-image: url('../assets/lebron.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  color:white;
+  text-shadow: 10px 10px 10px black;
 }
 
 #tryAgain {
   display:none;
+  font-size: 3em;
+  color:white;
+  margin-top:30px;
+  background:rgba(0,0,0,.7);
 }

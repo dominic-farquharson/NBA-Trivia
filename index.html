@@ -40,7 +40,7 @@
       <div id='scoreSection'>
         <h2 style="font-weight:normal">Score</h2>
         <div id='player1'>
-      <h3 class="scoreHeading">Player 1</h3>
+      <h3 class="scoreHeading playerName">Player 1</h3>
       <div id="playerScore" class='score'></div>
     </div>
     <div id='computer'>
@@ -66,6 +66,17 @@
   <script src="src/player.js"></script>
   <!-- Connecting App. Js. -->
   <script src="src/app.js"></script>
+
+  <script>
+  //Allowing user to input their name
+  getName();
+  function getName(){
+    let player1 = prompt('What is your name?');
+      $('.playerName').text(player1);
+  }
+
+
+  </script>
 
 </body>
 
