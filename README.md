@@ -9,7 +9,8 @@
 - CSS
 - Vanilla javascript
 - jquery
-- Velocity.js
+- Velocity
+
 ---
 ##Installation Instructions
 
