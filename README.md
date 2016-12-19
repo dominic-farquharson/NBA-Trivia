@@ -1,6 +1,8 @@
 #NBA Trivia Game
 
 ![NBA Trivia Game](assets/screenshot.png)
+
+###[Link to game](https://dominic-farquharson.github.io/NBA%20Trivia/)
 ---
 ##Technologies Used:
 - HTML
