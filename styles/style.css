@@ -4,17 +4,19 @@
   padding:10px;
   background:rgba(0,0,0,.7);
   color: white;
-  height:50px;
   margin-bottom: 10px;
   font-size:2.1em;
-    font-family: 'Baloo Thambi', cursive;
+  font-family: 'Baloo Thambi', cursive;
+  width:200px;
+  height:100px;
+  text-align: center;
+
 
 }
 
 #heading {
   font-size:1.4em;
   font-family: 'Exo', sans-serif;
-  /*text-align: center;*/
 
 }
 #heading>img {
@@ -37,13 +39,14 @@
 #timer {
   font-size: 2em;
   margin-bottom:20px;
-  position: absolute;
-  left: 47%;
-  top:30%;
+  position:relative;
+  left:10%;
+  top:50px;
   border:1px black solid;
   border-radius:100%;
   padding:10px;
   background:rgba(0,0,0,.7);
+  display:inline-block;
 
 }
 
@@ -111,10 +114,13 @@ body {
   text-shadow: 10px 10px 10px black;
 }
 
+/* Try Again button */
 #tryAgain {
   display:none;
   font-size: 3em;
   color:white;
   margin-top:30px;
   background:rgba(0,0,0,.7);
+  width:200px;
+  margin: 30px auto;
 }
