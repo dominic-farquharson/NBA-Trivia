@@ -37,6 +37,14 @@
 #timer {
   font-size: 2em;
   margin-bottom:20px;
+  position: absolute;
+  left: 47%;
+  top:30%;
+  border:1px black solid;
+  border-radius:100%;
+  padding:10px;
+  background:rgba(0,0,0,.7);
+
 }
 
 .scoreHeading {

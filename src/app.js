@@ -40,7 +40,26 @@ function endStartNew() {
 
 }
 
+function counter() {
+  //Interval runs every second
 
+  let timer = setInterval(function() {
+  $('#timer').html(Player1.time + 's');
+    Player1.time--;
+    if(Player1.time === -1) {
+      // alert('time is up');
+      clearInterval(timer);
+      //End game when time is up
+      alert('Time is up!');
+      endStartNew();
+    }
+
+  }, 1000);
+}
+
+
+//STarting Timer
+counter();
 //printing Question 1
 printQA(0);
 //Outputting Initial Score
