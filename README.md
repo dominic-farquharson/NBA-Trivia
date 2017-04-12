@@ -1,10 +1,10 @@
-#NBA Trivia Game
+# NBA Trivia Game
 
 ![NBA Trivia Game](assets/screenshot.png)
 
-###[Link to game](https://dominic-farquharson.github.io/NBA%20Trivia/)
+### [Link to game](https://dominic-farquharson.github.io/NBA%20Trivia/)
 ---
-##Technologies Used:
+## Technologies Used:
 - HTML
 - CSS
 - Vanilla javascript
@@ -12,13 +12,13 @@
 - Velocity
 
 ---
-##Installation Instructions
+## Installation Instructions
 
 - Download folder.
 - Double click on index.html to run the game
 
 ---
-##Sample Code: Timer Function
+## Sample Code: Timer Function
 ```javascript
 function counter() {
   //Interval runs every second
@@ -38,7 +38,7 @@ function counter() {
 }
 ```
 ---
-##Build Strategy
+## Build Strategy
 ```
 CSS/HTML:
   1. Create quiz layout.
@@ -54,28 +54,28 @@ Velocity.js:
   1. Add transition effects to quiz questions.
 ```  
 ---
-##Project Outline/Wireframe
+## Project Outline/Wireframe
 
 ![Wireframe](assets/wireframe.png)
 
 
 ---
-##Issues/Future Goals
-###Issues:
+## Issues/Future Goals
+### Issues:
 - One issue I had was with scopes. I could not access an object attribute from one of the object's methods.
 
-###Future Goals:
+### Future Goals:
 - Add two cars to the screen. One to represent the player and computer.
 - As each user gets a question correct, their car would advance.
 - A smaller timer. Timer would increase/decrease depending on if the user's answer is correct/wrong.
 
 
 ---
-##Special Thanks
+## Special Thanks
 
 Special thanks to my IA, Kate for providing direction as well as my fellow classmates for helping me out with any questions I had along the way.
 
 ---
-##Author
+## Author
 
 Dominic Farquharson
